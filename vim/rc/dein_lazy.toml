@@ -12,7 +12,7 @@ repo = 'Shougo/neocomplete.vim'
 depends = 'context_filetype.vim'
 if = "has('lua')"
 on_event = 'InsertEnter'
-#hook_source = 'source $HOME/.vim/rc/plugins/neocomplete.rc.vim'
+hook_source = 'source $HOME/.vim/rc/plugins/neocomplete.rc.vim'
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'

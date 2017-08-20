@@ -1,0 +1,6 @@
+alias vi='vim'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias l='ls -l'
+alias ll='ls -lA'
