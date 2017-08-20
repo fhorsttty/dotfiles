@@ -1,0 +1,4 @@
+if 1
+  runtime! rc/init.rc.vim
+  runtime! rc/dein.rc.vim
+endif
