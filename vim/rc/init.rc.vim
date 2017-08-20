@@ -20,6 +20,6 @@ set hlsearch
 set directory=~/.vim/tmp  " swapfile
 set backupdir=~/.vim/tmp  " .bak
 set undodir=~/.vim/tmp    " .un~
-set viminfo+=n$HOME/.vim/tmp/viminfo
+set viminfo+=n$HOME/.vim/viminfo
 
 colorscheme molokai
