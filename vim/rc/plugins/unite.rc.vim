@@ -5,6 +5,9 @@ let g:unite_enable_smart_case = 1
 " grep
 nnoremap <silent> ,ug :<C-u>Unite grep:-buffer-name=search-buffer<CR>
 
+" file/new
+nnoremap <silent> ,un :<C-u>Unite file/new<CR>
+
 " buffer
 nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
 
@@ -20,10 +23,16 @@ nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
 " utility
 nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR>
 
-" all
+" all lists
 nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
 
 au FileType unite nmap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
 au FileType unite imap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
 au FileType unite nmap <silent> <buffer> <expr> <C-j> unite#do_action('split')
 au FileType unite imap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
