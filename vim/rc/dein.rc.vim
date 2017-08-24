@@ -14,7 +14,7 @@ if dein#load_state(s:vim_rc_dir)
   call dein#begin(s:vim_rc_dir)
 
   let s:toml = s:vim_rc_dir . '/dein.toml'
-  let s:toml_lazy = s:vim_rc_dir . '/dein_lazy.toml'
+  let s:toml_lazy = s:vim_rc_dir . '/deinlazy.toml'
 
   call dein#load_toml(s:toml, {'lazy': 0})
   call dein#load_toml(s:toml_lazy, {'lazy': 1})

@@ -46,6 +46,21 @@ repo = 'hail2u/vim-css3-syntax'
 on_ft = [ 'css' ]
 
 [[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+on_ft = [ 'js', 'jsx' ]
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = [ 'jsx' ]
+hook_source = ''''
+  let g:jsx_ext_required = 0
+'''
+
+[[plugins]]
+repo = 'pmsorhaindo/syntastic-local-eslint.vim'
+on_ft = [ 'js', 'jsx' ]
+
+[[plugins]]
 repo = 'mattn/emmet-vim'
 on_i = 1
 
