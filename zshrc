@@ -25,6 +25,7 @@ zplug load #--verbose
 umask 022
 export EDITOR=vim
 export LANG=en_US.UTF-8
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'    # 単語の区切りと判定されない文字
 
 #---------------------------------------
 # coloring
@@ -39,12 +40,14 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 #---------------------------------------
 # keybinds
 #---------------------------------------
-bindkey -e                            # emacs風キーバインドを採用
-bindkey '^u' backward-kill-line
-autoload -Uz select-word-style        # 単語の区切り文字を指定する。
-select-word-style default
-zstyle ':zle:*' word-chars " /:@,|"   # Ctrl-wで区切り文字ごとに文字列を削除できる。
-zstyle ':zle:*' word-style unspecified 
+bindkey -e                              # emacs風キーバインドを採用
+bindkey '^U' backward-kill-line
+
+#autoload -Uz select-word-style          # 単語の区切り文字を指定する。
+#select-word-style default
+#zstyle ':zle:*' word-chars " _-/:@,|"   # Ctrl-wで区切り文字ごとに文字列を削除できる。
+#zstyle ':zle:*' word-style unspecified 
+
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
@@ -54,6 +57,7 @@ bindkey '^N' history-beginning-search-forward-end
 #bindkey '^S' history-incremental-pattern-search-forward
 zle -N peco-select-history
 bindkey '^R' peco-select-history
+
 zmodload zsh/complist
 bindkey -M menuselect '^G' .send-break                          # send-break２回分
 bindkey -M menuselect '^I' forward-char                         # １つ右の補完候補へ
@@ -119,6 +123,7 @@ setopt auto_cd                    # ディレクトリ名だけで移動する�
 setopt auto_pushd       
 setopt pushd_ignore_dups          # 重複するディレクトリはスタックに登録しない。
 setopt pushd_silent
+
 unsetopt ignore_eof               # Ctrl-Dでログアウトしない。
 setopt no_flow_control            # フロー制御(Ctrl-S || Ctrl-Q)を無効にする。
 setopt interactive_comments       # コマンドライン上の'#'以降をコメントとみなす。
@@ -129,6 +134,7 @@ setopt auto_resume                # サスペンド中のプロセスと同名�
 setopt notify                     # フォアグラウンド・ジョブの状態を通知する。
 setopt no_tify                    # バックグラウンド・ジョブの終了を通知する。
 setopt no_clobber                 # リダイレクト先のファイルが存在する場合はエラー終了する。
+
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd rename-tmux-window
 
