@@ -32,7 +32,7 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'    # 単語の区切りと判定されない�
 #---------------------------------------
 autoload -Uz colors; colors
 PROMPT="%{${fg[magenta]}%}%B%n@%m%b%f:%{${fg[yellow]}%}%B%c%b%f$ "    # username@hostname:directory$
-SPROMPT="${fg[magenta]}%}maybe%f: %R => '${fg[magenta]}%}%r%f' [n,${fg[magenta]}%}y%f,a,e]? "
+SPROMPT="${fg[magenta]}%}maybe%f => '${fg[magenta]}%}%r%f'? [n/${fg[magenta]}%}y%f/a/e] "
 eval "$(dircolors -b ~/.config/dircolors-solarized/dircolors.ansi-universal)"
 export ZLS_COLORS=$LS_COLORS
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
@@ -43,9 +43,10 @@ setopt prompt_subst                     # プロンプト変数内での変数�
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
-zstyle ':vcs_inf:*' formats "%F{green}%c%u[%b]%f"
-zstyle ':vcs_inf:*' actionformats '[%b|%a]'
+zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }                  # プロンプト表示直前にvcs_infoを呼び出す。
+#RPROMPT="%{${fg[blue]}%}[%~]%f"
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 #---------------------------------------
@@ -128,8 +129,6 @@ zstyle ':completion:*' ignore-parents parent pwd ..
 zstyle ':completion:*:processes' command "ps -u $USER -o pid,stat,%cpu,%mem,cputime,command"
 # 補完候補とその説明の区切り文字を指定する。
 zstyle ':completion:*' list-separator '=>'
-# ap-getコマンドでキャッシュを使用して高速化する。
-zstyle ':completion:*' use-cache true
 
 #---------------------------------------
 # other options
