@@ -32,7 +32,8 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'    # 単語の区切りと判定されない�
 #---------------------------------------
 autoload -Uz colors; colors
 PROMPT="%{${fg[magenta]}%}%B%n@%m%b%f:%{${fg[yellow]}%}%B%c%b%f$ "    # username@hostname:directory$
-SPROMPT="${fg[magenta]}%}maybe%f => '${fg[magenta]}%}%r%f'? [${fg[yellow]}%}%BN%b%f/${fg[magenta]}%}y%f/a/e] "
+#SPROMPT="${fg[magenta]}%}maybe%f => '${fg[magenta]}%}%r%f'? [${fg[yellow]}%}%BN%b%f/${fg[magenta]}%}y%f/a/e] "
+SPROMPT="maybe => '${fg[magenta]}%}%r%f'? [${fg[yellow]}%}%BN%b%f/${fg[magenta]}%}y%f/a/e] "
 eval "$(dircolors -b ~/.config/dircolors-solarized/dircolors.ansi-universal)"
 export ZLS_COLORS=$LS_COLORS
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
@@ -78,6 +79,9 @@ bindkey -M menuselect '^K' accept-and-infer-next-history        # 次の補完�
 bindkey -M menuselect '^P' up-line-or-history                   # １つ上の補完候補へ
 bindkey -M menuselect '^N' down-line-or-history                 # １つ下の補完候補へ
 bindkey -M menuselect '^R' history-incremental-pattern-forward  # １つ下の補完候補へ
+
+zle -N peco-cdr
+bindkey '^[r' peco-cdr
 
 #---------------------------------------
 # history
@@ -133,6 +137,14 @@ zstyle ':completion:*' list-separator '=>'
 #---------------------------------------
 # other options
 #---------------------------------------
+#autoload -Uz is-at-least
+#if is-at-least 4.3.11; then
+  autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+  add-zsh-hook chpwd chpwd_recent_dirs
+  zstyle ':chpwd:*' recent-dirs-max 1000
+  zstyle ':chpwd:*' recent-dirs-default yes
+  zstyle ':completion:*' recent-dirs-insert both
+#fi
 setopt auto_cd                    # ディレクトリ名だけで移動する。
 setopt auto_pushd       
 setopt pushd_ignore_dups          # 重複するディレクトリはスタックに登録しない。
@@ -171,6 +183,15 @@ function peco-select-history() {
   fi
   BUFFER=$(history -n 1 | eval $tac | peco --query "$LBUFFER")
   CURSOR=$#BUFFER
+}
+
+function peco-cdr() {
+  local recent_dirs="$(cdr -l | sed -e 's/^[0-9]\+ \+//' | peco)"
+  if [ -n "$recent_dirs" ]; then
+    BUFFER="cd ${recent_dirs}"
+    zle accept-line
+  fi
+  zle clear-screen
 }
 
 #---------------------------------------
