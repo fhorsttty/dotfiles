@@ -14,7 +14,7 @@ eval "$(dircolors -b ~/.config/dircolors-solarized/dircolors.ansi-universal)"
 export LS_OPTIONS='--color=auto'
 alias ls='ls $LS_OPTIONS'
 alias l='ls $LS_OPTIONS -Flh'
-alias ll='ls $LS_OPTIONS -FAlh'
+alias la='ls $LS_OPTIONS -FAlh'
 alias grep='grep $LS_OPTIONS'
 
 export EDITOR=/usr/bin/vim
