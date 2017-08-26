@@ -37,10 +37,21 @@ eval "$(dircolors -b ~/.config/dircolors-solarized/dircolors.ansi-universal)"
 export ZLS_COLORS=$LS_COLORS
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
+# git
+autoload -Uz vcs_info
+setopt prompt_subst                     # プロンプト変数内での変数展開する。      
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_inf:*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_inf:*' actionformats '[%b|%a]'
+precmd () { vcs_info }                  # プロンプト表示直前にvcs_infoを呼び出す。
+RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
+
 #---------------------------------------
 # keybinds
 #---------------------------------------
-bindkey -e                              # emacs風キーバインドを採用
+bindkey -e                               # emacs風キーバインドを採用
 bindkey '^U' backward-kill-line
 
 #autoload -Uz select-word-style          # 単語の区切り文字を指定する。
@@ -115,6 +126,10 @@ zstyle ':completion:*:default' menu select = 1
 zstyle ':completion:*' ignore-parents parent pwd ..
 # psコマンドでプロセス名を保管する。
 zstyle ':completion:*:processes' command "ps -u $USER -o pid,stat,%cpu,%mem,cputime,command"
+# 補完候補とその説明の区切り文字を指定する。
+zstyle ':completion:*' list-separator '=>'
+# ap-getコマンドでキャッシュを使用して高速化する。
+zstyle ':completion:*' use-cache true
 
 #---------------------------------------
 # other options
@@ -176,7 +191,8 @@ alias grep='grep $LS_OPTIONS'
 #---------------------------------------
 # development
 #---------------------------------------
-export EDITOR=/usr/bin/vim
+#export EDITOR=/usr/bin/vim
+export EDITOR=/usr/local/bin/vim
 eval "$(direnv hook zsh)"
 export PATH=$HOME/.anyenv/bin:$PATH
 eval "$(anyenv init -)"
