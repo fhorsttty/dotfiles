@@ -32,7 +32,7 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'    # 単語の区切りと判定されない�
 #---------------------------------------
 autoload -Uz colors; colors
 PROMPT="%{${fg[magenta]}%}%B%n@%m%b%f:%{${fg[yellow]}%}%B%c%b%f$ "    # username@hostname:directory$
-SPROMPT="${fg[magenta]}%}maybe%f => '${fg[magenta]}%}%r%f'? [n/${fg[magenta]}%}y%f/a/e] "
+SPROMPT="${fg[magenta]}%}maybe%f => '${fg[magenta]}%}%r%f'? [${fg[yellow]}%}%BN%b%f/${fg[magenta]}%}y%f/a/e] "
 eval "$(dircolors -b ~/.config/dircolors-solarized/dircolors.ansi-universal)"
 export ZLS_COLORS=$LS_COLORS
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
