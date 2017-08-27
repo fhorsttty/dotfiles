@@ -1,11 +1,20 @@
 [[plugins]]
 repo = 'Shougo/neomru.vim'
-on_source = 'unite.vim'
+#on_source = 'unite.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 on_source = [ 'unite.vim', 'vimshell.vim' ]
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+depends = 'neomru.vim'
+hook_add = 'source $HOME/.vim/rc/plugins/unite.rc.vim'
+
+[[plugins]]
+repo = 'kmnk/vim-unite-giti'
+depends = 'unite.vim'
 
 [[plugins]]
 repo = 'Shougo/neocomplete.vim'
