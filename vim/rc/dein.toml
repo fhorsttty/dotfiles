@@ -5,13 +5,6 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/vimshell.vim'
 hook_add = 'source $HOME/.vim/rc/plugins/vimshell.rc.vim'
 
-#[[plugins]]
-#repo = 'Shougo/unite.vim'
-#hook_add = 'source $HOME/.vim/rc/plugins/unite.rc.vim'
-
-#[[plugins]]
-#repo = 'kmnk/vim-unite-giti'
-
 [[plugins]]
 repo = 'thinca/vim-ref'
 hook_add = 'source $HOME/.vim/rc/plugins/vim-ref.rc.vim'
