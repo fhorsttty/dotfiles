@@ -205,6 +205,7 @@ alias mv='mv -i'
 export LS_OPTIONS='--color=auto'
 alias ls='ls $LS_OPTIONS'
 alias l='ls -Flh $LS_OPTIONS'
+alias L='ls -Flhr $LS_OPTIONS'
 alias la='ls -FlhA $LS_OPTIONS'
 alias grep='grep $LS_OPTIONS'
 
