@@ -32,10 +32,16 @@ nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR>
 " all lists
 nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
 
-au FileType unite nmap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
-au FileType unite imap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
-au FileType unite nmap <silent> <buffer> <expr> <C-j> unite#do_action('split')
-au FileType unite imap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+au FileType unite nmap <silent> <buffer> <expr> <C-h> unite#do_action('left')
+au FileType unite imap <silent> <buffer> <expr> <C-h> unite#do_action('left')
+au FileType unite nmap <silent> <buffer> <expr> <C-l> unite#do_action('right'')
+au FileType unite imap <silent> <buffer> <expr> <C-l> unite#do_action('right')
+au FileType unite nmap <silent> <buffer> <expr> <C-k> unite#do_action('above')
+au FileType unite imap <silent> <buffer> <expr> <C-k> unite#do_action('above')
+au FileType unite nmap <silent> <buffer> <expr> <C-j> unite#do_action('below')
+au FileType unite imap <silent> <buffer> <expr> <C-j> unite#do_action('below')
+au FileType unite nmap <silent> <buffer> <expr> <C-t> unite#do_action('tabopen')
+au FileType unite imap <silent> <buffer> <expr> <C-t> unite#do_action('tabopen')
 
 " unite grep call 'ag'
 if executable('ag')
