@@ -18,3 +18,15 @@ repo = 'Townk/vim-autoclose'
 [[plugins]]
 repo = 'vim-syntastic/syntastic'
 hook_add = 'source $HOME/.vim/rc/plugins/syntastic.rc.vim'
+
+[[plugins]]
+repo = 'Quramy/tsuquyomi'
+on_ft = [ 'ts', 'tsx' ]
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = [ 'ts', 'tsx' ]
+
+#[[plugins]]
+#repo = 'w0rp/ale'
+#hook_add = 'source $HOME/.vim/rc/plugins/ale.rc.vim'

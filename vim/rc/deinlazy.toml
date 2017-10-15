@@ -69,6 +69,10 @@ repo = 'pmsorhaindo/syntastic-local-eslint.vim'
 on_ft = [ 'js', 'jsx' ]
 
 [[plugins]]
+repo = 'vim-scripts/vim-stylus'
+on_ft = [ 'styl', 'stylus' ]
+
+[[plugins]]
 repo = 'mattn/emmet-vim'
 on_i = 1
 
