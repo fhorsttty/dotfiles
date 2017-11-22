@@ -13,7 +13,8 @@ eval "$(dircolors -b ~/.config/dircolors-solarized/dircolors.ansi-universal)"
 
 export LS_OPTIONS='--color=auto'
 alias ls='ls $LS_OPTIONS'
-alias l='ls $LS_OPTIONS -Flh'
+alias l='ls $LS_OPTIONS -F'
+alias ll='ls $LS_OPTIONS -Flh'
 alias la='ls $LS_OPTIONS -FAlh'
 alias grep='grep $LS_OPTIONS'
 
