@@ -1,5 +1,8 @@
+" for vim.tiny and vim.small
+runtime! rc/tiny.rc.vim
+
 " Note: Skip initialization for vim.tiny or vim.small
 if 1
-  runtime! rc/init.rc.vim
+  runtime! rc/basic.rc.vim
   runtime! rc/dein.rc.vim
 endif

@@ -11,8 +11,8 @@ set smartindent         " C言語風の字下げをする。
 set noequalalways       " ウィンドウ分割時に高さを等分に分割しない。
 set visualbell t_vb=    " ビープ音をビジュアルベルに変更し、機能を無効にする。
 set noerrorbells        " エラーを表示するとにビープ音を鳴らさない。 
-set t_Co=256            " トゥルーカラーを使用する。確認 => :verbose set t_Co?
-set t_ut=               " 文字の背景色と画面の背景色が一致しない場合の黒魔術(非推奨)
+" set t_Co=256            " トゥルーカラーを使用する。確認 => :verbose set t_Co?
+" set t_ut=               " 文字の背景色と画面の背景色が一致しない場合の黒魔術(非推奨)
 
 set ignorecase          " 文字列検索時に大文字小文字の区別を無視する。 
 set smartcase           " 大文字小文字が混在する場合は、区別して検索する。 
@@ -27,4 +27,4 @@ set viminfo+=n$HOME/.vim/viminfo
 
 " filetype plugin indent on     " ファイルの拡張子に応じて字下げする。
 " set syntax on                 " 構文に応じて文字を色付けする。
-colorscheme molokai
+" colorscheme molokai
