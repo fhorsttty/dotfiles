@@ -22,3 +22,17 @@ set directory=~/.vim/tmp  " .swap
 set backupdir=~/.vim/tmp  " .bak
 set undodir=~/.vim/tmp    " .un
 set viminfo+=n$HOME/.vim/viminfo
+
+map <Up> <Nop>          " 矢印キーの操作を禁止 
+map <Down> <Nop>
+map <Left> <Nop>
+map <Right> <Nop>
+map <Del> <Nop>         " Deleteキーの操作を禁止
+map <BS> <Nop>          " BackSpaceキーの操作を禁止
+
+inoremap <Up> <Nop>     " 矢印キーの操作を禁止
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap <Del> <Nop>    " Deleteキーの操作を禁止
+inoremap <BS> <Nop>     " BackSpaceキーの操作を禁止
