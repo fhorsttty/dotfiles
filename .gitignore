@@ -1,7 +1,9 @@
 user/vim/.netrwhist
 user/vim/viminfo
-user/vim/tmp
-user/vim/colors
+user/vim/tmp/*
+!user/vim/tmp/.gitkeep
+user/vim/colors/*
+!user/vim/colors/.gitkeep
 user/vim/rc/.cache
 user/vim/rc/cache_vi
 user/vim/rc/cache_vim
