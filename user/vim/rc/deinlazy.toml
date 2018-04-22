@@ -78,3 +78,9 @@ on_i = 1
 
 [[plugins]]
 repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'Rykka/clickable.vim'
+
+[[plugins]]
+repo = 'Rykka/riv.vim'
