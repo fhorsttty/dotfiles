@@ -1,0 +1,8 @@
+#include "$HOME/.Xresources.d/xft"
+#include "$HOME/.Xresources.d/rxvt-unicode"
+
+!----------------
+! Solarized Dark
+!----------------
+! git clone https://github.com/solarized/xresources.git 
+#include "$HOME/.Xresources.d/Xresources.dark"
