@@ -20,8 +20,8 @@ alias grep='grep $LS_OPTIONS'
 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u@\h\[\033[00m\]:\[\033[00;34m\]\W\[\033[00m\]\$ '
 
-export EDITOR=/usr/bin/vim
-eval "$(direnv hook bash)"
+#export EDITOR=/usr/bin/vim
+#eval "$(direnv hook bash)"
 
-export PATH=$HOME/.anyenv/bin:$PATH
-eval "$(anyenv init -)"
+#export PATH=$HOME/.anyenv/bin:$PATH
+#eval "$(anyenv init -)"

@@ -5,10 +5,8 @@ user/vim/tmp/*
 user/vim/colors/*
 !user/vim/colors/.gitkeep
 user/vim/rc/.cache
-user/vim/rc/cache_vi
-user/vim/rc/cache_vim
-user/vim/rc/state_vi.vim
-user/vim/rc/state_vim.vim
+user/vim/rc/cache_vi*
+user/vim/rc/state_vi*
 user/vim/rc/repos
 user/vim/rc/plugins/vim-ref.rc.vim
 user/Xresources.d/Xresources.dark

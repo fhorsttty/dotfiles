@@ -5,7 +5,7 @@ URxvt.scrollBar:  false
 URxvt.scrollBar_right:    false
 URxvt.scrollBar_floating: false
 URxvt.scrollStyle:        rxvt
-URxvt.font: xft:monospace:pixelsize=16, \
+URxvt.font: xft:monospace:pixelsize=15, \
             xft:IPAGothic
-URxvt.letterSpace:  0
+URxvt.letterSpace:  -1
 URxvt.lineSpace:    1

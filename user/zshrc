@@ -213,8 +213,8 @@ alias grep='grep $LS_OPTIONS'
 #---------------------------------------
 # development
 #---------------------------------------
-#export EDITOR=/usr/bin/vim
-export EDITOR=/usr/local/bin/vim
+export EDITOR=/usr/bin/vim
+#export EDITOR=/usr/local/bin/vim
 eval "$(direnv hook zsh)"
 export PATH=$HOME/.anyenv/bin:$PATH
 eval "$(anyenv init -)"
