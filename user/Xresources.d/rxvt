@@ -7,5 +7,3 @@ URxvt.scrollBar:  false
 URxvt.scrollBar_right:    false
 URxvt.scrollBar_floating: false
 URxvt.scrollStyle:        rxvt
-URxvt.letterSpace:  -1
-URxvt.lineSpace:    1
