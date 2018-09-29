@@ -30,6 +30,18 @@ on_ft = [ 'ts', 'tsx' ]
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = 'source $HOME/.vim/rc/plugins/vim-airline.rc.vim'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
 #[[plugins]]
 #repo = 'w0rp/ale'
 #hook_add = 'source $HOME/.vim/rc/plugins/ale.rc.vim'
+
+#[[plugins]]
+#repo = 'powerline/powerline'
+#rtp = 'powerline/bindings/vim/' 
+#hook_add = 'source $HOME/.vim/rc/plugins/powerline.rc.vim'

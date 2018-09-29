@@ -1,0 +1,13 @@
+URxvt.termName:   rxvt
+URxvt.geometry:   90x30
+URxvt.saveLines:  10000
+URxvt.scrollBar:  false
+URxvt.scrollBar_right:    false
+URxvt.scrollBar_floating: false
+URxvt.scrollStyle:        rxvt
+URxvt.font: xft:Roboto\ Mono\ for\ Powerline:pixelsize:12, \
+            xft:IPAGothic
+
+!! xft:monospace:pixelsize=15, \
+URxvt.letterSpace:  -1
+URxvt.lineSpace:    1

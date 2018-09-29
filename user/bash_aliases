@@ -7,6 +7,7 @@ alias bd='popd > /dev/null'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias sudo='sudo '  # dont't remove space!
 alias tmux='tmux -2'
 
 eval "$(dircolors -b ~/.config/dircolors-solarized/dircolors.ansi-universal)"

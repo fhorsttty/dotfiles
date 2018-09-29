@@ -18,7 +18,8 @@ export XMODIFIERS='@im=fcitx'
 fcitx
 
 # volume
-volumeicon &
+#volumeicon &
+pasystray &
 
 # window manager
 exec awesome

@@ -1,11 +1,11 @@
-URxvt.termName:   rxvt
+! vi: set ft=xdefaults :
+
+URxvt.termName:   rxvt-256color
 URxvt.geometry:   90x30
 URxvt.saveLines:  10000
 URxvt.scrollBar:  false
 URxvt.scrollBar_right:    false
 URxvt.scrollBar_floating: false
 URxvt.scrollStyle:        rxvt
-URxvt.font: xft:monospace:pixelsize=15, \
-            xft:IPAGothic
 URxvt.letterSpace:  -1
 URxvt.lineSpace:    1

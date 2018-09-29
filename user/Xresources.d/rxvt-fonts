@@ -1,0 +1,6 @@
+! vi: set ft=xdefaults :
+
+URxvt.font: xft:monospace:pixelsize=14, \
+            xft:VL Gothic, \
+            xft:IPAGothic, \
+            xft:IPAexGothic
