@@ -2,6 +2,7 @@
 
 URxvt.letterSpace:  0
 URxvt.lineSpace:    0
+
 URxvt.font: xft:DejaVu Sans Mono for Powerline:pixelsize=15, \
             xft:VL Gothic, \
             xft:IPAGothic, \
