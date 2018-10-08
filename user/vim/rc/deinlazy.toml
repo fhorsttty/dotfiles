@@ -79,11 +79,14 @@ on_i = 1
 [[plugins]]
 repo = 'tomasr/molokai'
 
+# reStructuredText for sphinx
 [[plugins]]
 repo = 'Rykka/clickable.vim'
 
 [[plugins]]
 repo = 'Rykka/riv.vim'
+depends = 'clickable.vim'
+on_ft = [ 'rst' ]
 
 [[plugins]]
 repo = 'justmao945/vim-clang'
