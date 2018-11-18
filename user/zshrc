@@ -209,7 +209,7 @@ alias ll='ls -Flh $LS_OPTIONS'
 #alias L='ls -Flhr $LS_OPTIONS'
 alias la='ls -FlhA $LS_OPTIONS'
 alias grep='grep $LS_OPTIONS'
-alias sudo='sudo '  # don't remove space!
+alias sudo='sudo -E '  # don't remove space!
 
 #---------------------------------------
 # development
