@@ -17,6 +17,9 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS='@im=fcitx'
 fcitx
 
+# xterm
+xrdb $HOME/.Xresources
+
 # screen lock
 light-locker --lock-on-suspend &
 
