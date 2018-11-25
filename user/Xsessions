@@ -2,20 +2,23 @@
 # vi: set ft=sh :
 
 # Multi Display
-#IN="DVI-I-2"
-#EXT="DVI-I-3"
+IN="DVI-I-2"
+EXT="DVI-I-3"
 
-#if (xrandr | grep "$EXT disconnected"); then
-#  xrandr --output $IN --auto --output $EXT --off
-#else
-#  xrandr --output $IN --auto --primary --output $EXT --auto --left-of $IN
-#fi
+if (xrandr | grep "$EXT disconnected"); then
+  xrandr --output $IN --auto --output $EXT --off
+else
+  xrandr --output $IN --auto --primary --output $EXT --auto --left-of $IN
+fi
 
 # settings of kana
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS='@im=fcitx'
 fcitx
+
+# screen lock
+light-locker --lock-on-suspend &
 
 # volume
 pasystray &
