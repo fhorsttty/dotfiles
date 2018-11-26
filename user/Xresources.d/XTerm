@@ -1,5 +1,6 @@
 ! vi: set ft=xdefaults :
 
+xterm*termName: xterm-256color
 xterm*locale: true
 xterm*metaSendsEscape: true
 xterm*saveLines: 10000
