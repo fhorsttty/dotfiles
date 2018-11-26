@@ -1,7 +1,12 @@
 ! vi: set ft=xdefaults :
 
-XTerm*utf8:         1
-!XTerm*faceName:     'Monospace'
-XTerm*faceName:     DejaVu Sans Mono for Powerline,
-XTerm*faceSize:     11
-XTerm*cjkWidth:     true
+xterm*locale: true
+xterm*metaSendsEscape: true
+xterm*saveLines: 10000
+xterm*cjkWidth: true
+xterm*faceSize: 11
+!xterm*faceName: Monospace:antialias=false
+xterm*faceName: DejaVu Sans Mono for Powerline:antialias=false
+xterm*faceNameDoublesize: IPAexGothic
+xterm*background: black
+xterm*foreground: white
