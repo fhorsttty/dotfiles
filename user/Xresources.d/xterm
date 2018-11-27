@@ -9,5 +9,5 @@ xterm*faceSize: 11
 !xterm*faceName: Monospace:antialias=false
 xterm*faceName: DejaVu Sans Mono for Powerline:antialias=false
 xterm*faceNameDoublesize: IPAexGothic
-xterm*background: black
-xterm*foreground: white
+!xterm*background: black
+!xterm*foreground: white
