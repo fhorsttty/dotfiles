@@ -11,6 +11,9 @@ else
   xrandr --output $IN --auto --primary --output $EXT --auto --left-of $IN
 fi
 
+# set No Beep
+xset b off
+
 # settings of kana
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
