@@ -3,6 +3,7 @@
 
 alias vi='vim'
 alias cd='pushd > /dev/null'
+alias ..='pushd .. > /dev/null'
 alias bd='popd > /dev/null'
 alias rm='rm -i'
 alias cp='cp -i'
@@ -15,6 +16,7 @@ eval "$(dircolors -b ~/.config/dircolors-solarized/dircolors.ansi-universal)"
 export LS_OPTIONS='--color=auto'
 alias ls='ls $LS_OPTIONS'
 alias l='ls $LS_OPTIONS -F'
+alias l.='ls $LS_OPTIONS -Fd .*'
 alias ll='ls $LS_OPTIONS -Flh'
 alias la='ls $LS_OPTIONS -FAlh'
 alias grep='grep $LS_OPTIONS'
