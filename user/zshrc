@@ -31,9 +31,15 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'    # 単語の区切りと判定されない�
 # coloring
 #---------------------------------------
 autoload -Uz colors; colors
-PROMPT="%{${fg[magenta]}%}%B%n@%m%b%f:%{${fg[yellow]}%}%B%c%b%f$ "    # username@hostname:directory$
-#SPROMPT="${fg[magenta]}%}maybe%f => '${fg[magenta]}%}%r%f'? [${fg[yellow]}%}%BN%b%f/${fg[magenta]}%}y%f/a/e] "
-SPROMPT="maybe => '${fg[magenta]}%}%r%f'? [${fg[yellow]}%}%BN%b%f/${fg[magenta]}%}y%f/a/e] "
+
+# username@hostname:directory$
+# [38;5;033m => blue / foreground color
+PROMPT=$'%B%n@%m%b%f:%{\e[38;5;033m%}%c%b%f$ '
+
+# maybe => command ? [N/y/a/e]
+# [38;5;125m => magenta / foreground color
+SPROMPT=$'maybe => %{\e[38;5;125m%}%B%r%f ? [%BN%b%f/y/%{\e[38;5;125m%}%Ba%b%f/e] '
+
 eval "$(dircolors -b ~/.config/dircolors-solarized/dircolors.ansi-universal)"
 export ZLS_COLORS=$LS_COLORS
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
@@ -81,7 +87,7 @@ bindkey -M menuselect '^N' down-line-or-history                 # １つ下の�
 bindkey -M menuselect '^R' history-incremental-pattern-forward  # １つ下の補完候補へ
 
 zle -N peco-cdr
-bindkey '^[r' peco-cdr
+bindkey '^[r' peco-cdr    # [Alt] + r
 
 #---------------------------------------
 # history
@@ -205,6 +211,7 @@ alias mv='mv -i'
 export LS_OPTIONS='--color=auto'
 alias ls='ls $LS_OPTIONS'
 alias l='ls -F $LS_OPTIONS'
+alias l.='ls $LS_OPTIONS -Fd .*'
 alias ll='ls -Flh $LS_OPTIONS'
 #alias L='ls -Flhr $LS_OPTIONS'
 alias la='ls -FlhA $LS_OPTIONS'
