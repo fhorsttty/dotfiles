@@ -77,7 +77,13 @@ repo = 'mattn/emmet-vim'
 on_i = 1
 
 [[plugins]]
+repo = 'lervag/vimtex'
+on_ft = [ 'tex' ]
+hook_add = 'source $HOME/.vim/rc/plugins/vimtex.rc.vim'
+
+[[plugins]]
 repo = 'tomasr/molokai'
+
 
 # reStructuredText for sphinx
 [[plugins]]
