@@ -1,0 +1,11 @@
+# -*- mode: sh -*-
+# vi: set ft=sh :
+
+# screen lock
+light-locker --lock-on-suspend &
+
+# volumeicon
+pnmixer &
+
+# window manager
+exec awesome

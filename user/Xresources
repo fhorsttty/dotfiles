@@ -5,6 +5,6 @@
 !! urxvt
 #include ".Xresources.d/xft"
 #include ".Xresources.d/rxvt"
-!#include ".Xresources.d/rxvt-fonts"
+!#include ".xresources.d/rxvt-fonts"
 #include ".Xresources.d/rxvt-powerline-fonts"
 #include ".Xresources.d/xterm"

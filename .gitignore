@@ -1,5 +1,6 @@
 user/vim/.netrwhist
 user/vim/viminfo
+user/vim/viminfo.tmp
 user/vim/tmp/*
 !user/vim/tmp/.gitkeep
 user/vim/colors/*

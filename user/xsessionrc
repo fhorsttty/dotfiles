@@ -22,16 +22,13 @@ xset dpms 2700 2700 2700
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS='@im=fcitx'
-fcitx
+fcitx &
 
 # xterm
-xrdb $HOME/.Xresources
+#xrdb $HOME/.Xresources
 
 # screen lock
-light-locker --lock-on-suspend &
+#light-locker --lock-on-suspend &
 
-# volume
-pasystray &
-
-# window manager
-exec awesome
+# volumeicon
+#pnmixer &
