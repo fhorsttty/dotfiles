@@ -1,3 +1,4 @@
+! -*- mode: xdefaults -*-
 ! vi: set ft=xdefaults :
 
 xterm*termName: xterm-256color

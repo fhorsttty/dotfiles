@@ -1,3 +1,6 @@
+! -*- mode: xdefaults -*-
+! vi: set ft=xdefaults :
+
 xft.dpi:        96
 xft.antialias:  true
 xft.rgba:       rgb

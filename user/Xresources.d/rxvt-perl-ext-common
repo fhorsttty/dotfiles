@@ -1,0 +1,17 @@
+! -*- mode: xdefaults -*-
+! vi: set ft=xdefaults :
+
+! import perl extensions explicitly
+URxvt.perl-ext-common: matcher,keyboard-select
+
+! urxvt-matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.keysym.M-m: matcher:select
+URxvt.keysym.M-M: matcher:last
+URxvt.matcher.rend.0: Uline fg14
+
+! git clone https://github.com/muennich/urxvt-perls.git
+URxvt.keyboard-select.clipboard: true
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search

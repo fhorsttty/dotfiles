@@ -1,10 +1,11 @@
-!!  Solarized Dark Theme
-!! git clone https://github.com/solarized/xresources.git 
+!  Solarized Dark Theme
+! git clone https://github.com/solarized/xresources.git 
 #include ".Xresources.d/Xresources.dark"
 
-!! urxvt
+! urxvt
 #include ".Xresources.d/xft"
 #include ".Xresources.d/rxvt"
 !#include ".xresources.d/rxvt-fonts"
 #include ".Xresources.d/rxvt-powerline-fonts"
+#include ".Xresources.d/rxvt-perl-ext-common"
 #include ".Xresources.d/xterm"
