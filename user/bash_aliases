@@ -11,6 +11,8 @@ alias mv='mv -i'
 alias sudo='sudo -E '  # dont't remove space!
 alias tmux='tmux -2'
 
+# cd ~/.config
+# git clone https://github.com/seebi/dircolors-solarized.git
 eval "$(dircolors -b ~/.config/dircolors-solarized/dircolors.ansi-universal)"
 
 export LS_OPTIONS='--color=auto'

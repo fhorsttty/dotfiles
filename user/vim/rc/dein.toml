@@ -38,6 +38,10 @@ hook_add = 'source $HOME/.vim/rc/plugins/vim-airline.rc.vim'
 repo = 'vim-airline/vim-airline-themes'
 
 #[[plugins]]
+#repo = 'vim-scripts/dbext.vim'
+#hook_add = 'source $HOME/.vim/rc/plugins/dbext.rc.vim'
+
+#[[plugins]]
 #repo = 'w0rp/ale'
 #hook_add = 'source $HOME/.vim/rc/plugins/ale.rc.vim'
 

@@ -1,6 +1,18 @@
+# -*- mode: sh -*-
+# vi: set ft=sh :
+
 alias vi='vim'
+#alias cd='pushd > /dev/null'
+#alias ..='pushd .. > /dev/null'
+alias bd='popd > /dev/null'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias l='ls -lh'
-alias la='ls -lAh'
+alias sudo='sudo -E '
+
+alias ls='ls --color=auto'
+alias l='ls --color=auto -F'
+alias l.='ls --color=auto -Fd .*'
+alias ll='ls --color=auto -Flh'
+alias la='ls --color=auto -FAlh'
+alias grep='grep --color=auto'
