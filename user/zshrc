@@ -224,5 +224,5 @@ alias sudo='sudo -E '  # don't remove space!
 export EDITOR=/usr/bin/vim
 #export EDITOR=/usr/local/bin/vim
 eval "$(direnv hook zsh)"
-export PATH=$HOME/.anyenv/bin:$PATH
+export PATH=$HOME/.anyenv/bin:$HOME/.local/bin:$PATH
 eval "$(anyenv init -)"
