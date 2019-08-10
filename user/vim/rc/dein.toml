@@ -5,9 +5,9 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/vimshell.vim'
 hook_add = 'source $HOME/.vim/rc/plugins/vimshell.rc.vim'
 
-[[plugins]]
-repo = 'thinca/vim-ref'
-hook_add = 'source $HOME/.vim/rc/plugins/vim-ref.rc.vim'
+#[[plugins]]
+#repo = 'thinca/vim-ref'
+#hook_add = 'source $HOME/.vim/rc/plugins/vim-ref.rc.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
@@ -19,13 +19,13 @@ repo = 'Townk/vim-autoclose'
 repo = 'vim-syntastic/syntastic'
 hook_add = 'source $HOME/.vim/rc/plugins/syntastic.rc.vim'
 
-[[plugins]]
-repo = 'Quramy/tsuquyomi'
-on_ft = [ 'ts', 'tsx' ]
+#[[plugins]]
+#repo = 'Quramy/tsuquyomi'
+#on_ft = [ 'ts', 'tsx' ]
 
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
-on_ft = [ 'ts', 'tsx' ]
+#[[plugins]]
+#repo = 'leafgarland/typescript-vim'
+#on_ft = [ 'ts', 'tsx' ]
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'

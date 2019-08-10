@@ -39,11 +39,11 @@ repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
-on_ft = 'toml'
+on_ft = [ 'toml' ]
 
 [[plugins]]
 repo = 'elzr/vim-json'
-on_ft = 'json'
+on_ft = [ 'json' ]
 
 [[plugins]]
 repo = 'othree/html5.vim'
@@ -83,7 +83,6 @@ hook_add = 'source $HOME/.vim/rc/plugins/vimtex.rc.vim'
 
 [[plugins]]
 repo = 'tomasr/molokai'
-
 
 # reStructuredText for sphinx
 [[plugins]]
