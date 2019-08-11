@@ -5,7 +5,7 @@
 ! urxvt
 #include ".Xresources.d/xft"
 #include ".Xresources.d/rxvt"
-!#include ".xresources.d/rxvt-fonts"
+!#include ".Xresources.d/rxvt-fonts"
 #include ".Xresources.d/rxvt-powerline-fonts"
 #include ".Xresources.d/rxvt-perl-ext-common"
 #include ".Xresources.d/xterm"

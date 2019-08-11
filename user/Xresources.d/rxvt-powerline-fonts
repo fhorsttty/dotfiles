@@ -3,8 +3,9 @@
 
 URxvt.letterSpace:  0
 URxvt.lineSpace:    0
-
-URxvt.font: xft:DejaVu Sans Mono for Powerline:pixelsize=15, \
+!xft:DejaVu Sans Mono for Powerline:pixelsize=15
+!xft:Inconsolata for Powerline:pixelsize=18
+URxvt.font: xft:Hack-Regular:pixelsize=16, \
             xft:VL Gothic, \
             xft:IPAGothic, \
             xft:IPAexGothic
