@@ -208,6 +208,8 @@ alias bd='popd > /dev/null'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias less='less -Q'          # no beep
+alias man='man -P "less -Q"'  # no beep
 export LS_OPTIONS='--color=auto'
 alias ls='ls $LS_OPTIONS'
 alias l='ls -F $LS_OPTIONS'
@@ -217,6 +219,8 @@ alias ll='ls -Flh $LS_OPTIONS'
 alias la='ls -FlhA $LS_OPTIONS'
 alias grep='grep $LS_OPTIONS'
 alias sudo='sudo -E '  # don't remove space!
+
+export PAGER='/usr/bin/less -Q' # no beep
 
 #---------------------------------------
 # development

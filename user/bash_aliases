@@ -8,6 +8,8 @@ alias bd='popd > /dev/null'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias less='less -Q'          # no beep
+alias man='man -P "less -Q"'  # no beep
 alias sudo='sudo -E '  # dont't remove space!
 alias tmux='tmux -2'
 
@@ -24,6 +26,8 @@ alias la='ls $LS_OPTIONS -FAlh'
 alias grep='grep $LS_OPTIONS'
 
 PS1='${debian_chroot:+($debian_chroot)}\e[1m\u@\h\e[0m:\e[38;5;033m\W\e[0m$ '
+
+export PAGER='/usr/bin/less -Q' # no beep
 
 export EDITOR=/usr/bin/vim
 eval "$(direnv hook bash)"

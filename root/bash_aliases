@@ -8,6 +8,8 @@ alias bd='popd > /dev/null'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias less='less -Q'          # no beep
+alias man='man -P "less -Q"'  # no beep
 alias tmux='tmux -2'
 
 # cd ~/.config

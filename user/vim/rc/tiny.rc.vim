@@ -9,7 +9,8 @@ set shiftwidth=2        " 挿入する字下げ幅を２文字にする。
 set autoindent          " 改行時に字下げ幅を自動的に挿入する。
 set smartindent         " C言語風の字下げをする。
 set noequalalways       " ウィンドウ分割時に高さを等分に分割しない。
-set visualbell t_vb=    " ビープ音をビジュアルベルに変更し、機能を無効にする。
+"set visualbell t_vb=    " ビープ音をビジュアルベルに変更し、機能を無効にする。
+set belloff=all         " ビープ音をビジュアルベルに変更し、機能を無効にする。
 set noerrorbells        " エラーを表示するとにビープ音を鳴らさない。 
 
 set ignorecase          " 文字列検索時に大文字小文字の区別を無視する。 
