@@ -1,32 +1,15 @@
-" Disable AutoComplPop
-let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#auto_completion_start_length = 2
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 2
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
-let g:neocomplete#sources#dictionary#dictionaries = {
-      \ 'default' : ''
-}
+" <TAB> completion
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
-if !exsits('g:neocomplete#keyword_patterns')
-  let g:neocomplete#keyword_patterns = {}
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
 endif
-let g:necomplete#keyword_patterns['default'] = '\h\w'
 
-inoremap <expr><C-g>    neocomplete#undo_completion()
-inoremap <expr><C-l>    neocomplete#complete_common_string()
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
-endif
+let g:neocomplete#force_overwrite_completefunc = 1
+" No preview window for C and C++
+let g:neocomplete#force_omni_input_patterns.c =
+  \ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
+let g:neocomplete#force_omni_input_patterns.cpp =
+  \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'

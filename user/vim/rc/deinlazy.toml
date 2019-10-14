@@ -1,3 +1,7 @@
+#
+# Vim
+#
+
 [[plugins]]
 repo = 'Shougo/neomru.vim'
 
@@ -17,29 +21,69 @@ depends = 'unite.vim'
 
 [[plugins]]
 repo = 'Shougo/neocomplete.vim'
-depends = 'context_filetype.vim'
+depends = [
+  'context_filetype.vim',
+  'neoinclude.vim'
+]
 if = "has('lua')"
 on_event = 'InsertEnter'
 hook_source = 'source $HOME/.vim/rc/plugins/neocomplete.rc.vim'
 
 [[plugins]]
-repo = 'Shougo/neosnippet.vim'
-depends = [
-  'neosnippet-snippets',
-  'context_filetype.vim'
-] 
-on_event = 'InsertCharPre'
-hook_source = 'source $HOME/.vim/rc/plugins/neosnippet.rc.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+repo = 'Shougo/neoinclude.vim'
 
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
 
+#[[plugins]]
+#repo = 'Shougo/deoplete.nvim'
+#depends = [
+#  'nvim-yarp',
+#  'vim-hug-neovim-rpc',
+#  'neoinclude.vim',
+#  'context_filetype.vim',
+#]
+#on_event = 'InsertEnter'
+#hook_source = 'source $HOME/.vim/rc/plugins/deoplete.rc.vim'
+
+#[[plugins]]
+#repo = 'roxma/nvim-yarp'
+
+#[[plugins]]
+#repo = 'roxma/vim-hug-neovim-rpc'
+
+#[[plugins]]
+#repo = 'tweekmonster/deoplete-clang2'
+#depends = [ 'deoplete.nvim' ]
+#on_ft = [ 'c', 'cpp', 'cxx', 'h' ]
+
+[[plugins]]
+repo = 'justmao945/vim-clang'
+on_ft = [ 'c', 'cpp', 'cxx', 'h' ]
+hook_add = 'source $HOME/.vim/rc/plugins/vim-clang.rc.vim'
+
+#[[plugins]]
+#repo = 'Shougo/neosnippet.vim'
+#depends = [
+#  'neosnippet-snippets',
+#  'context_filetype.vim'
+#] 
+#on_event = 'InsertCharPre'
+#hook_source = 'source $HOME/.vim/rc/plugins/neosnippet.rc.vim'
+
+#[[plugins]]
+#repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = [ 'toml' ]
+
+#
+# HTML/CSS/JS
+#
 
 [[plugins]]
 repo = 'elzr/vim-json'
@@ -76,15 +120,10 @@ on_ft = [ 'styl', 'stylus' ]
 repo = 'mattn/emmet-vim'
 on_i = 1
 
-[[plugins]]
-repo = 'lervag/vimtex'
-on_ft = [ 'tex' ]
-hook_add = 'source $HOME/.vim/rc/plugins/vimtex.rc.vim'
-
-[[plugins]]
-repo = 'tomasr/molokai'
-
+#
 # reStructuredText for sphinx
+#
+
 [[plugins]]
 repo = 'Rykka/clickable.vim'
 
@@ -93,9 +132,9 @@ repo = 'Rykka/riv.vim'
 depends = 'clickable.vim'
 on_ft = [ 'rst' ]
 
-[[plugins]]
-repo = 'justmao945/vim-clang'
-on_ft = [ 'c', 'cpp' ]
+#
+# Python
+#
 
 [[plugins]]
 repo = 'Vimjas/vim-python-pep8-indent'
@@ -113,3 +152,11 @@ hook_source = 'source $HOME/.vim/rc/plugins/jedi-vim.rc.vim'
 repo = 'jmcantrell/vim-virtualenv'
 on_ft = [ 'py' ]
 
+#
+# other
+#
+
+[[plugins]]
+repo = 'lervag/vimtex'
+on_ft = [ 'tex' ]
+hook_add = 'source $HOME/.vim/rc/plugins/vimtex.rc.vim'
